@@ -2,7 +2,7 @@ package com.trabalho.api.services;
 
 import com.trabalho.api.entities.Produto;
 import com.trabalho.api.exceptions.RecursoNaoEncontradoException;
-import com.trabalho.api.logging.SpringAppLogger;
+import com.trabalho.api.logging.AppLogger;
 import com.trabalho.api.repositories.IJpaProdutoRepo;
 import org.springframework.stereotype.Service;
 
@@ -13,13 +13,13 @@ public class ProdutoService {
 
     private static final String ORIGEM = "ProdutoService";
 
-    private final IJpaProdutoRepo produtoRepo;
-    private final SpringAppLogger log;
+    // Versão final: Singleton clássico (ver README, seção "Versão final escolhida")
+    private final AppLogger log = AppLogger.getInstance();
 
-    // Versão Spring: o logger é INJETADO pelo container
-    public ProdutoService(IJpaProdutoRepo produtoRepo, SpringAppLogger log) {
+    private final IJpaProdutoRepo produtoRepo;
+
+    public ProdutoService(IJpaProdutoRepo produtoRepo) {
         this.produtoRepo = produtoRepo;
-        this.log = log;
     }
 
     public Produto criar(Produto produto) {
