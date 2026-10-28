@@ -1,0 +1,32 @@
+2026-10-27 23:37:10.040 [INFO ] [restartedMain] ProdutoApiApplication - API de Produtos iniciada
+2026-10-27 23:43:08.604 [ERRO ] [http-nio-8080-exec-1] GlobalExceptionHandler - Requisição inválida, respondendo 400 | causa: HttpMessageNotReadableException: JSON parse error: Invalid UTF-8 middle byte 0x6e
+2026-10-27 23:43:08.750 [DEBUG] [http-nio-8080-exec-2] ProdutoController - POST /produtos recebido
+2026-10-27 23:43:08.751 [DEBUG] [http-nio-8080-exec-2] ProdutoService - Criando produto: nome=Mouse, preco=89.90
+2026-10-27 23:43:08.839 [INFO ] [http-nio-8080-exec-2] ProdutoService - Produto criado com id=1
+2026-10-27 23:43:08.840 [INFO ] [http-nio-8080-exec-2] ProdutoController - POST /produtos -> 201 Created (id=1)
+2026-10-27 23:43:08.902 [DEBUG] [http-nio-8080-exec-3] ProdutoController - GET /produtos recebido
+2026-10-27 23:43:09.080 [DEBUG] [http-nio-8080-exec-3] ProdutoService - Consulta findAll retornou 1 registro(s)
+2026-10-27 23:43:09.081 [INFO ] [http-nio-8080-exec-3] ProdutoService - Listagem de produtos concluída
+2026-10-27 23:43:09.081 [INFO ] [http-nio-8080-exec-3] ProdutoController - GET /produtos -> 200 OK (1 itens)
+2026-10-27 23:43:09.152 [DEBUG] [http-nio-8080-exec-6] ProdutoController - GET /produtos/1 recebido
+2026-10-27 23:43:09.153 [DEBUG] [http-nio-8080-exec-6] ProdutoService - Buscando produto id=1
+2026-10-27 23:43:09.168 [INFO ] [http-nio-8080-exec-6] ProdutoService - Produto id=1 encontrado
+2026-10-27 23:43:09.169 [INFO ] [http-nio-8080-exec-6] ProdutoController - GET /produtos/1 -> 200 OK
+2026-10-27 23:43:09.240 [DEBUG] [http-nio-8080-exec-8] ProdutoController - GET /produtos/99 recebido
+2026-10-27 23:43:09.240 [DEBUG] [http-nio-8080-exec-8] ProdutoService - Buscando produto id=99
+2026-10-27 23:43:09.243 [ERRO ] [http-nio-8080-exec-8] ProdutoService - Produto id=99 não encontrado
+2026-10-27 23:43:09.244 [ERRO ] [http-nio-8080-exec-8] GlobalExceptionHandler - Respondendo 404 Not Found | causa: RecursoNaoEncontradoException: Produto id=99 não encontrado
+2026-10-27 23:43:09.337 [ERRO ] [http-nio-8080-exec-10] GlobalExceptionHandler - Requisição inválida, respondendo 400 | causa: HttpMessageNotReadableException: JSON parse error: Invalid UTF-8 middle byte 0x6e
+2026-10-27 23:43:09.438 [DEBUG] [http-nio-8080-exec-1] ProdutoController - PUT /produtos/99 recebido
+2026-10-27 23:43:09.439 [DEBUG] [http-nio-8080-exec-1] ProdutoService - Atualizando produto id=99 -> nome=X, preco=1, estoque=null
+2026-10-27 23:43:09.440 [ERRO ] [http-nio-8080-exec-1] ProdutoService - Produto id=99 não encontrado
+2026-10-27 23:43:09.440 [ERRO ] [http-nio-8080-exec-1] GlobalExceptionHandler - Respondendo 404 Not Found | causa: RecursoNaoEncontradoException: Produto id=99 não encontrado
+2026-10-27 23:43:09.526 [DEBUG] [http-nio-8080-exec-4] ProdutoController - DELETE /produtos/2 recebido
+2026-10-27 23:43:09.527 [DEBUG] [http-nio-8080-exec-4] ProdutoService - Removendo produto id=2
+2026-10-27 23:43:09.807 [ERRO ] [http-nio-8080-exec-4] ProdutoService - Produto id=2 não encontrado
+2026-10-27 23:43:09.807 [ERRO ] [http-nio-8080-exec-4] GlobalExceptionHandler - Respondendo 404 Not Found | causa: RecursoNaoEncontradoException: Produto id=2 não encontrado
+2026-10-27 23:43:09.870 [DEBUG] [http-nio-8080-exec-5] ProdutoController - DELETE /produtos/2 recebido
+2026-10-27 23:43:09.871 [DEBUG] [http-nio-8080-exec-5] ProdutoService - Removendo produto id=2
+2026-10-27 23:43:09.873 [ERRO ] [http-nio-8080-exec-5] ProdutoService - Produto id=2 não encontrado
+2026-10-27 23:43:09.874 [ERRO ] [http-nio-8080-exec-5] GlobalExceptionHandler - Respondendo 404 Not Found | causa: RecursoNaoEncontradoException: Produto id=2 não encontrado
+2026-10-27 23:43:09.955 [ERRO ] [http-nio-8080-exec-7] GlobalExceptionHandler - Requisição inválida, respondendo 400 | causa: MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "abc"
